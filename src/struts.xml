@@ -19,5 +19,9 @@
 			<result name="input">/validate/register1.jsp</result>
 			<result name="success">/validate/success.jsp</result>
 		</action>
+		<action name="register2" class="validatorAction.Regist2Action">
+			<result name="input">/validate/register2.jsp</result>
+			<result name="success">/validate/success2.jsp</result>
+		</action>
 	</package>
 </struts>    

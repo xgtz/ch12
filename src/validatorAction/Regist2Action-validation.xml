@@ -1,0 +1,46 @@
+<!DOCTYPE validators PUBLIC 
+"-//OpenSymphony Group//XWork Validator 1.0.2//EN"  
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd" >
+<validators>
+	
+	<validator type="requiredstring">
+		<param name="fieldName">userName</param>
+		<param name="trim">true</param>
+		<message>请输入姓名</message>
+	</validator>
+	<validator type="stringlength">
+		<param name="fieldName">userName</param>
+		<param name="maxLength">16</param>
+		<param name="minLength">6</param>
+		<message>姓名长度为${minLength}到${maxLength}个字符!</message>
+	</validator>
+	<validator type="stringlength">
+		<param name="fieldName">userPassword</param>
+		<param name="maxLength">16</param>
+		<param name="minLength">6</param>
+		<message>姓名长度为${minLength}到${maxLength}个字符!</message>
+	</validator>
+	<validator type="fieldexpression">
+		<param name="fieldName">userPassword</param>
+		<param name="expression">
+			<![CDATA[userPassword==ruserPassword]]>
+		</param>
+		<message>两次密码不一致!</message>
+	</validator>
+	<validator type="int">
+		<param name="fieldName">userAge</param>
+		<param name="max">130</param>
+		<param name="min">1</param>
+		<message>年龄必须在${min}到${max}之间!</message>
+	</validator>
+	<validator type="stringlength">
+		<param name="fieldName">userTelephone</param>
+		<param name="maxLength">8</param>
+		<param name="minLength">8</param>
+		<message>电话号码必须是8为长度!</message>
+	</validator>
+	<validator type="email">
+		<param name="fieldName">userEmail</param>
+		<message>请使用正确的邮件格式!</message>
+	</validator>
+</validators>    
