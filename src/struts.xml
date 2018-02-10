@@ -11,5 +11,9 @@
 			<interceptor-ref name="defaultStack"></interceptor-ref>
 			<interceptor-ref name="replace"></interceptor-ref>
 		</action>
+		<action name="register" class="validate.RegistAction">
+			<result name="input">/validate/register.jsp</result>
+			<result name="success">/validate/success.jsp</result>
+		</action>
 	</package>
 </struts>    
