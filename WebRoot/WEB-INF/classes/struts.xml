@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="interceptor" extends="struts-default">
+		<interceptors>
+			<interceptor name="replace" class="interceptor.MyInterceptor" />
+		</interceptors>
+		<action name="public" class="interceptor.PublicAction">
+			<result name="success">/interceptor/success.jsp</result>
+			<result name="login">/interceptor/success.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="replace"></interceptor-ref>
+		</action>
+	</package>
+</struts>    
